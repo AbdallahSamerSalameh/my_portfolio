@@ -12,12 +12,27 @@
     <main class="about-main">
         <header>
             <nav>
-            <a href="..\index.html">Home</a>
-            <a href="about-me.html">About Me</a>
-            <a href="projects.html">Projects</a>
-            <a href="skills.html">Skills</a>
-            <a href="contacts.html">Contact</a>
+                <a href="..\index.html">Home</a>
+                <a href="about-me.html">About Me</a>
+                <a href="projects.html">Projects</a>
+                <a href="skills.html">Skills</a>
+                <a href="contacts.html">Contact</a>
             </nav>
+            <div class="mobile-menu">
+                <span class="icon" onclick="toggleMobileMenu()">
+                    <i class="fa fa-bars"></i>
+                </span>
+                <div class="menu-links" id="mobileMenuLinks">
+                    <span class="icon" onclick="toggleMobileMenu()">
+                        <i class="fa fa-times"></i>
+                    </span>
+                    <a href="..\index.html">Home</a>
+                    <a href="about-me.html">About Me</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="contacts.html">Contact</a>
+                </div>
+            </div>
         </header>
         <section class="about-section">
             <h2 class="about-headers">
@@ -31,10 +46,10 @@
             </h2>
             <p>
                 <ul class="list">
-                    <li>
+                    <li class="txt">
                         <i class="fa-solid fa-school"></i> High School | <i>2020</i>
                     </li>
-                    <li>
+                    <li class="txt">
                         <i class="fa-solid fa-building-columns"></i> Jordan University of Science and Technology | <i>2020-2024</i> 
                     </li>
                 </ul>
@@ -44,16 +59,16 @@
             </h2>
             <p>
                 <ul class="list">
-                    <li>
+                    <li class="txt">
                         <i class="fa-solid fa-certificate"></i> Graphic Design in Adobe Illustrator | <i><b><u>By AILIA PRESS</u></b></i>
                     </li>
-                    <li>
+                    <li class="txt">
                         <i class="fa-solid fa-certificate"></i> QA Course | <i><b><u>By The Hope International</u></b></i>
                     </li>
-                    <li>
+                    <li class="txt">
                         <i class="fa-solid fa-certificate"></i> QA Advanced Course | <i><b><u>By The Hope International</u></b></i>
                     </li>
-                    <li>
+                    <li class="txt">
                         <i class="fa-solid fa-certificate"></i> Agile Course | <i><b><u>By The Hope International</u></b></i>
                     </li>
                 </ul>
@@ -63,10 +78,10 @@
             </h2>
             <p>
                 <ul class="list">
-                    <li>
+                    <li class="txt">
                         <i class="fa-regular fa-comment"></i> Arabic | Native
                     </li>
-                    <li>
+                    <li class="txt">
                         <i class="fa-regular fa-comment"></i> English | Exellent
                     </li>
                 </ul>
@@ -74,4 +89,10 @@
         </section>
     </main>
 </body>
+<script>
+    function toggleMobileMenu() {
+        const menuLinks = document.getElementById("mobileMenuLinks");
+        menuLinks.classList.toggle("open");
+    }
+</script>
 </html>
